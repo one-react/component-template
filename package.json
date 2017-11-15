@@ -2,11 +2,12 @@
   "name": "component-template",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "jsnext:main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src/index.js --out-file lib/index.js",
-    "watch": "babel src/index.js --watch --out-file lib/index.js",
+    "build": "babel src --out-dir lib",
+    "watch": "babel src --watch --out-dir lib",
     "lint": "eslint src",
     "precommit": "npm run lint",
     "commitmsg": "commitlint -e $GIT_PARAMS"
