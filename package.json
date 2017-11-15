@@ -8,7 +8,8 @@
     "build": "babel src/index.js --out-file lib/index.js",
     "watch": "babel src/index.js --watch --out-file lib/index.js",
     "lint": "eslint src",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,8 @@
   },
   "homepage": "https://github.com/foryuki/component-template#readme",
   "devDependencies": {
+    "@commitlint/cli": "^4.3.0",
+    "@commitlint/config-angular": "^4.3.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
