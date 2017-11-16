@@ -1,0 +1,27 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook -s public",
+    "deploy": "storybook-to-ghpages"
+  },
+  "storybook-deployer": {
+    "gitUsername": "Yuki Bot",
+    "gitEmail": "zhangjihong1993@gmail.com",
+    "commitMessage": "Deploy Storybook"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/react": "^3.2.15"
+  },
+  "dependencies": {
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-scripts": "^1.0.17"
+  }
+}
