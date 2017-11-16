@@ -6,7 +6,7 @@ class Hello extends Component {
   render () {
     return (
       <div>
-        {a}
+        {a} 2222
       </div>
     )
   }
