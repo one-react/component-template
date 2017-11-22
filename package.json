@@ -1,6 +1,5 @@
 {
-  "name": "component-template",
-  "version": "0.0.0-development",
+  "name": "one-react-template",
   "description": "",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
