@@ -11,7 +11,8 @@
     "precommit": "npm run lint",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "commitizen": "^2.9.6",
+    "coveralls": "^3.0.0",
     "cz-conventional-changelog": "^2.1.0",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
