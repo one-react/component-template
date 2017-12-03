@@ -1,5 +1,5 @@
 {
-  "name": "one-react-template",
+  "name": "or-template",
   "description": "",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/foryuki/component-template.git"
+    "url": "https://github.com/one-react/component-template.git"
   },
   "author": "Yuki Zhang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/foryuki/component-template/issues"
+    "url": "https://github.com/one-react/component-template/issues"
   },
-  "homepage": "https://github.com/foryuki/component-template#readme",
+  "homepage": "https://github.com/one-react/component-template#readme",
   "devDependencies": {
     "@commitlint/cli": "^4.3.0",
     "@commitlint/config-angular": "^4.3.0",
@@ -61,5 +61,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "version": "0.0.0-development"
 }
