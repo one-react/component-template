@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './styles.scss'
 import a from './a'
 
 class Hello extends Component {
