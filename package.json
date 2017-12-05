@@ -54,7 +54,7 @@
     "semantic-release": "^8.2.0"
   },
   "dependencies": {
-    "or-theme": "^1.0.0"
+    "or-theme": "^1.1.0"
   },
   "peerDependencies": {
     "react": ">=15.5 <=16.x"
