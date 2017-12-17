@@ -5,7 +5,7 @@
   "jsnext:main": "src/index.js",
   "scripts": {
     "test": "jest -c jest.config.js --bail --coverage",
-    "build": "babel src --out-dir lib",
+    "build": "babel src --out-dir lib --copy-files",
     "watch": "babel src --watch --out-dir lib",
     "lint": "eslint src",
     "precommit": "npm run lint",
