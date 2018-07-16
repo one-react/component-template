@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test default values 1`] = `
+Array [
+  ".babelrc",
+  ".editorconfig",
+  ".eslintrc.json",
+  ".gitignore",
+  ".npmignore",
+  ".npmrc",
+  ".travis.yml",
+  "LICENSE",
+  "circle.yml",
+  "commitlint.config.js",
+  "examples/.storybook/.babelrc",
+  "examples/.storybook/addons.js",
+  "examples/.storybook/config.js",
+  "examples/.storybook/manager-head.html",
+  "examples/.storybook/webpack.config.js",
+  "examples/package.json",
+  "examples/public/favicon.ico",
+  "examples/stories/index.js",
+  "jest.config.js",
+  "package.json",
+  "readme.md",
+  "src/Hello.js",
+  "src/a.js",
+  "src/index.js",
+  "src/styles.scss",
+  "tests/Hello.test.js",
+  "tests/a.test.js",
+  "tests/setup.js",
+]
+`;
+
+exports[`test default values 2`] = `
+"{
+  \\"presets\\": [
+    \\"env\\",
+    \\"react\\",
+    \\"stage-0\\"
+  ]
+}
+"
+`;
+
+exports[`test default values 3`] = `
+"package-lock=false
+"
+`;
