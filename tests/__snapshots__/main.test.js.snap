@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test default values 1`] = `
+exports[`test ok 1`] = `
 Array [
   ".babelrc",
+  ".circleci/config.yml",
   ".editorconfig",
   ".eslintrc.json",
   ".gitignore",
@@ -10,7 +11,6 @@ Array [
   ".npmrc",
   ".travis.yml",
   "LICENSE",
-  "circle.yml",
   "commitlint.config.js",
   "examples/.storybook/.babelrc",
   "examples/.storybook/addons.js",
@@ -33,7 +33,7 @@ Array [
 ]
 `;
 
-exports[`test default values 2`] = `
+exports[`test ok 2`] = `
 "# One More React Component: stub
 > one react component: stub
 
@@ -46,7 +46,7 @@ MIT &copy; placeholder
 "
 `;
 
-exports[`test default values 3`] = `
+exports[`test ok 3`] = `
 "{
   \\"presets\\": [
     \\"env\\",
@@ -57,7 +57,7 @@ exports[`test default values 3`] = `
 "
 `;
 
-exports[`test default values 4`] = `
+exports[`test ok 4`] = `
 "package-lock=false
 "
 `;
