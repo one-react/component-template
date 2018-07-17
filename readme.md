@@ -1,6 +1,6 @@
 # one react template
 
-> a SAO template
+> a SAOJS template
 
 [![Build Status](https://img.shields.io/travis/one-react/component-template.svg)](https://travis-ci.org/one-react/component-template)
 [![Build Status](https://img.shields.io/circleci/project/github/one-react/component-template.svg)](https://circleci.com/gh/one-react/component-template)
@@ -13,7 +13,7 @@
 
 ## Usage
 
-Install [SAO](https://github.com/egoist/sao) first.
+Install [SAOJS](https://github.com/egoist/sao) first.
 
 ```bash
 yarn global add sao
@@ -24,13 +24,15 @@ npm i -g sao
 ### From npm
 
 ```bash
-sao or-template my-project
+cd my-component
+sao or-template
 ```
 
 ### From git
 
 ```bash
-sao one-react/template my-project
+cd my-component
+sao one-react/component-template
 ```
 
 ## License

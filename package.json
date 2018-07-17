@@ -6,9 +6,10 @@
     "lint": "eslint src",
     "precommit": "npm run lint",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release",
     "commit": "git-cz",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,7 @@
     "husky": "^0.14.3",
     "jest": "^23.4.1",
     "sao": "^0.22.1",
-    "semantic-release": "^8.2.0"
+    "semantic-release": "^15.8.0"
   },
   "config": {
     "commitizen": {
