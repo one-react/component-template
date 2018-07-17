@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test ok 1`] = `
+Array [
+  ".babelrc",
+  ".circleci/config.yml",
+  ".editorconfig",
+  ".eslintrc.json",
+  ".gitignore",
+  ".npmignore",
+  ".npmrc",
+  ".travis.yml",
+  "LICENSE",
+  "commitlint.config.js",
+  "examples/.storybook/.babelrc",
+  "examples/.storybook/addons.js",
+  "examples/.storybook/config.js",
+  "examples/.storybook/manager-head.html",
+  "examples/.storybook/webpack.config.js",
+  "examples/package.json",
+  "examples/public/favicon.ico",
+  "examples/stories/index.js",
+  "jest.config.js",
+  "package.json",
+  "readme.md",
+  "src/Hello.js",
+  "src/a.js",
+  "src/index.js",
+  "src/styles.scss",
+  "tests/Hello.test.js",
+  "tests/a.test.js",
+  "tests/setup.js",
+]
+`;
+
+exports[`test ok 2`] = `
+"# One More React Component: stub
+> one react component: stub
+
+[![Build Status](https://img.shields.io/travis/one-react/stub.svg)](https://travis-ci.org/one-react/stub)[![Coveralls github](https://img.shields.io/coveralls/github/one-react/stub.svg)](https://coveralls.io/github/one-react/stub)[![Version](https://img.shields.io/npm/v/or-stub.svg)](https://www.npmjs.com/package/or-stub)[![Chat](https://img.shields.io/gitter/room/one-react-org/Lobby.svg)](https://gitter.im/one-react-org/Lobby)[![Code Climate](https://img.shields.io/codeclimate/github/one-react/stub.svg)](https://codeclimate.com/github/one-react/stub)[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+
+## License
+
+MIT &copy; placeholder
+"
+`;
+
+exports[`test ok 3`] = `
+"{
+  \\"presets\\": [
+    \\"env\\",
+    \\"react\\",
+    \\"stage-0\\"
+  ]
+}
+"
+`;
+
+exports[`test ok 4`] = `
+"package-lock=false
+"
+`;
