@@ -12,6 +12,7 @@ Array [
   ".travis.yml",
   "LICENSE",
   "commitlint.config.js",
+  "examples/.npmrc",
   "examples/.storybook/.babelrc",
   "examples/.storybook/addons.js",
   "examples/.storybook/config.js",
