@@ -2,7 +2,8 @@
   "name": "or-<%= name %>",
   "description": "<%= description %>",
   "main": "lib/index.js",
-  "jsnext:main": "src/index.js",
+  "module": "es/index.js",
+  "sideEffects": true,
   "scripts": {
     "test": "jest -c jest.config.js --bail --coverage",
     "clean": "rimraf lib es",
