@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "declarationDir": "./lib",
     "declaration": true,
     "allowSyntheticDefaultImports": true,
@@ -13,9 +13,15 @@
     "noUnusedParameters": true,
     "pretty": true,
     "skipLibCheck": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "lib": [
+      "esnext",
+      "es2015",
+      "dom"
+    ]
   },
   "exclude": [
+    "tests",
     "node_modules",
     "**/node_modules/*"
   ]

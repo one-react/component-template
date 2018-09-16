@@ -14,4 +14,8 @@ const plugins = [
   '@babel/plugin-proposal-object-rest-spread'
 ]
 
+if (process.env.NODE_ENV === 'test') {
+  plugins.push('@babel/plugin-transform-modules-commonjs')
+}
+
 module.exports = { presets, plugins }
