@@ -5,7 +5,13 @@
   "jsnext:main": "src/index.js",
   "scripts": {
     "test": "jest -c jest.config.js --bail --coverage",
-    "build": "babel src --out-dir lib --copy-files",
+    "clean": "rimraf lib es",
+    "type-check": "tsc --noEmit",
+    "build": "npm run clean && npm run build:js && npm run build:es",
+    "build:js": "npm run build:js:types && babel src --out-dir lib --copy-files --extensions '.ts,.tsx'",
+    "build:js:types": "tsc --emitDeclarationOnly",
+    "build:es": "npm run build:es:types && NODE_ENV=es babel src --out-dir es --copy-files --extensions '.ts,.tsx'",
+    "build:es:types": "tsc --emitDeclarationOnly --declarationDir es",
     "watch": "babel src --watch --out-dir lib",
     "lint": "eslint src",
     "precommit": "npm run lint",
@@ -27,6 +33,7 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.0.0",
@@ -53,6 +60,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
+    "rimraf": "^2.6.2",
     "semantic-release": "^8.2.0",
     "typescript": "^3.0.3"
   },
