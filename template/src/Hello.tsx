@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import a from './a'
 
-class Hello extends React.PureComponent<{
-  content: string;
-}, {}> {
+interface Props {
+  /**
+   * Value to display, either empty string or you passed
+   *
+   * @default ""
+   **/
+  content?: string;
+}
+
+export class Hello extends PureComponent<Props, {}> {
   render () {
     return (
       <div className='title'>
-        {a} 2222 {this.props.content}
+        {a} {this.props.content}
       </div>
     )
   }
 }
-
-export default Hello
