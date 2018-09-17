@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme'
 
-import Hello from '../src/Hello'
+import { Hello } from '../src/Hello'
 
 const wrapper = shallow(<Hello />)
 const wrapper = shallow(<Hello content="world" />)
