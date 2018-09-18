@@ -1,18 +1,26 @@
+sudo: false
 language: node_js
 cache:
+  yarn: true
   directories:
-    - ~/.npm
     - node_modules
 notifications:
   email: false
 node_js:
+  - '10'
+  - '9'
   - '8'
 before_script:
   - npm prune
 after_success:
   - npm run build
-  - npm run coveralls
-  - npm run semantic-release
+  - npm run coverage
+  - npm install -g travis-deploy-once
+  - travis-deploy-once "npm run semantic-release"
+  - cd examples
+  - yarn
+  - npm run deploy -- --ci --host-token-env-variable=GITHUB_TOKEN
 branches:
   only:
     - master
+    - /^greenkeeper/.*$/
