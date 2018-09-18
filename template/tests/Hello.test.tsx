@@ -1,8 +1,8 @@
+import React from 'react'
 import { shallow } from 'enzyme'
 
 import { Hello } from '../src/Hello'
 
-const wrapper = shallow(<Hello />)
 const wrapper = shallow(<Hello content="world" />)
 
 describe('src/index', () => {

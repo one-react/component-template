@@ -21,8 +21,8 @@
     ]
   },
   "exclude": [
-    "examples",
     "tests",
+    "examples",
     "node_modules",
     "**/node_modules/*"
   ]

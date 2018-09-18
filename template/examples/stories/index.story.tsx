@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from "@storybook/addon-info"
 // import { action } from '@storybook/addon-actions'
 
-import Hello from 'index'
+import Hello from '../../src'
 
 storiesOf('Hello', module)
   .add('with text', () => (
@@ -12,13 +12,16 @@ storiesOf('Hello', module)
   .add('docs', withInfo({ inline: true })(() => (
     <div style={styles.container}>
       <div style={styles.firstCellContainer}>
-        <Hello content="world!!!233" />
+        <Hello content="world!" />
       </div>
       <div style={styles.cellContainer}>
       <Hello content="world" />
       </div>
     </div>
   )))
+  // .add('with some emoji', () => (
+  //   <button onClick={action('clicked')}>😀 😎 👍 💯</button>
+  // ))
 
 const styles: { [key: string]: CSSProperties } = {
   container: {
