@@ -56,17 +56,59 @@ MIT &copy; placeholder
 `;
 
 exports[`test ok 3`] = `
-"{
-  \\"presets\\": [
-    \\"env\\",
-    \\"react\\",
-    \\"stage-0\\"
-  ]
+"const presets = [
+  [
+    '@babel/preset-env',
+    {
+      modules: process.env.NODE_ENV === 'es' ? false : 'commonjs'
+    }
+  ],
+  '@babel/preset-react',
+  '@babel/preset-typescript'
+]
+
+const plugins = [
+  '@babel/plugin-proposal-class-properties',
+  '@babel/plugin-proposal-object-rest-spread'
+]
+
+if (process.env.NODE_ENV === 'test') {
+  plugins.push('@babel/plugin-transform-modules-commonjs')
 }
+
+module.exports = { presets, plugins }
 "
 `;
 
 exports[`test ok 4`] = `
-"package-lock=false
+"{
+  \\"compilerOptions\\": {
+    \\"target\\": \\"esnext\\",
+    \\"module\\": \\"commonjs\\",
+    \\"baseUrl\\": \\"./src\\",
+    \\"declarationDir\\": \\"./lib\\",
+    \\"declaration\\": true,
+    \\"allowSyntheticDefaultImports\\": true,
+    \\"esModuleInterop\\": true,
+    \\"jsx\\": \\"react\\",
+    \\"moduleResolution\\": \\"node\\",
+    \\"noUnusedLocals\\": true,
+    \\"noUnusedParameters\\": true,
+    \\"pretty\\": true,
+    \\"skipLibCheck\\": true,
+    \\"sourceMap\\": true,
+    \\"lib\\": [
+      \\"esnext\\",
+      \\"es2015\\",
+      \\"dom\\"
+    ]
+  },
+  \\"exclude\\": [
+    \\"tests\\",
+    \\"examples\\",
+    \\"node_modules\\",
+    \\"**/node_modules/*\\"
+  ]
+}
 "
 `;
