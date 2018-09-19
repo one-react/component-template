@@ -17,12 +17,17 @@ module.exports = {
       message: 'What is your GitHub email?',
       default: ':gitEmail:',
       store: true
-    }
+    },
+    gitInit: {
+      message: 'Should git init then?',
+      default: true,
+    },
   },
   move: {
     'gitignore': '.gitignore'
   },
   showTip: true,
-  gitInit: true,
-  installDependencies: false
+  gitInit: ({ gitInit }) => gitInit,
+  installDependencies: false,
+  npmInstall: true,
 }

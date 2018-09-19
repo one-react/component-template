@@ -21,7 +21,7 @@ describe('test', () => {
     expect(pkg.license).toBe('MIT')
 
     expect(stream.fileContents('readme.md')).toMatchSnapshot()
-    expect(stream.fileContents('.babelrc')).toMatchSnapshot()
-    expect(stream.fileContents('.npmrc')).toMatchSnapshot()
+    expect(stream.fileContents('.babelrc.js')).toMatchSnapshot()
+    expect(stream.fileContents('tsconfig.json')).toMatchSnapshot()
   })
 })
