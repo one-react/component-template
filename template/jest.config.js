@@ -1,18 +1,25 @@
 module.exports = {
+  moduleFileExtensions: [
+    'js', 'jsx', 'json',
+    'ts', 'tsx'
+  ],
+  transform: {
+    '^.+\\.tsx?$': 'babel-jest',
+  },
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**',
     '!src/*\\.scss',
-    '!src/index.js'
+    '!src/index.ts'
   ],
-  mapCoverage: true,
   setupFiles: [
-    '<rootDir>/tests/setup.js'
+    '<rootDir>/tests/setup.ts'
   ],
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
-    '<rootDir>/src/index.js',
+    '<rootDir>/src/index.ts',
     '<rootDir>/src/*\\.scss'
   ],
-  testRegex: '/tests/.+\\.test\\.js$'
+  testRegex: '/tests/.+\\.test\\.tsx?$',
+  testURL: 'http://localhost/',
 }
