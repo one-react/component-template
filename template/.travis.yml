@@ -1,8 +1,8 @@
 sudo: false
 language: node_js
 cache:
-  yarn: true
   directories:
+    - ~/.npm
     - node_modules
 notifications:
   email: false
@@ -18,7 +18,7 @@ after_success:
   - npm install -g travis-deploy-once
   - travis-deploy-once "npm run semantic-release"
   - cd examples
-  - yarn
+  - npm install
   - npm run deploy -- --ci --host-token-env-variable=GITHUB_TOKEN
 branches:
   only:

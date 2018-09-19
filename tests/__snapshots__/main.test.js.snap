@@ -2,35 +2,37 @@
 
 exports[`test ok 1`] = `
 Array [
-  ".babelrc",
+  ".babelrc.js",
   ".circleci/config.yml",
   ".editorconfig",
-  ".eslintrc.json",
   ".gitignore",
   ".npmignore",
   ".npmrc",
+  ".prettierrc",
   ".travis.yml",
+  ".vscode/launch.json",
   "LICENSE",
   "commitlint.config.js",
   "examples/.npmrc",
-  "examples/.storybook/.babelrc",
   "examples/.storybook/addons.js",
   "examples/.storybook/config.js",
   "examples/.storybook/manager-head.html",
   "examples/.storybook/webpack.config.js",
   "examples/package.json",
   "examples/public/favicon.ico",
-  "examples/stories/index.js",
+  "examples/stories/index.story.tsx",
   "jest.config.js",
   "package.json",
   "readme.md",
-  "src/Hello.js",
-  "src/a.js",
-  "src/index.js",
+  "src/Hello.tsx",
+  "src/a.ts",
+  "src/index.ts",
   "src/styles.scss",
-  "tests/Hello.test.js",
-  "tests/a.test.js",
-  "tests/setup.js",
+  "tests/Hello.test.tsx",
+  "tests/a.test.ts",
+  "tests/setup.ts",
+  "tsconfig.json",
+  "tslint.json",
 ]
 `;
 
@@ -38,8 +40,14 @@ exports[`test ok 2`] = `
 "# One More React Component: stub
 > one react component: stub
 
-[![Build Status](https://img.shields.io/travis/one-react/stub.svg)](https://travis-ci.org/one-react/stub)[![Coveralls github](https://img.shields.io/coveralls/github/one-react/stub.svg)](https://coveralls.io/github/one-react/stub)[![Version](https://img.shields.io/npm/v/or-stub.svg)](https://www.npmjs.com/package/or-stub)[![Chat](https://img.shields.io/gitter/room/one-react-org/Lobby.svg)](https://gitter.im/one-react-org/Lobby)[![Code Climate](https://img.shields.io/codeclimate/github/one-react/stub.svg)](https://codeclimate.com/github/one-react/stub)[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
+[![TravisCI Build](https://img.shields.io/travis/one-react/stub.svg)](https://travis-ci.org/one-react/stub)
+[![CircieCI Build](https://img.shields.io/circleci/project/github/one-react/stub.svg)](https://circleci.com/gh/one-react/stub)
+[![Coverage](https://img.shields.io/codecov/c/github/one-react/stub.svg)](https://codecov.io/gh/one-react/stub) 
+[![Version](https://img.shields.io/npm/v/or-stub.svg)](https://www.npmjs.com/package/or-stub)
+[![Chat](https://img.shields.io/gitter/room/one-react-org/Lobby.svg)](https://gitter.im/one-react-org/Lobby)
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Greenkeeper badge](https://badges.greenkeeper.io/one-react/stub.svg)](https://greenkeeper.io/) 
 
 ## License
 
@@ -48,17 +56,59 @@ MIT &copy; placeholder
 `;
 
 exports[`test ok 3`] = `
-"{
-  \\"presets\\": [
-    \\"env\\",
-    \\"react\\",
-    \\"stage-0\\"
-  ]
+"const presets = [
+  [
+    '@babel/preset-env',
+    {
+      modules: process.env.NODE_ENV === 'es' ? false : 'commonjs'
+    }
+  ],
+  '@babel/preset-react',
+  '@babel/preset-typescript'
+]
+
+const plugins = [
+  '@babel/plugin-proposal-class-properties',
+  '@babel/plugin-proposal-object-rest-spread'
+]
+
+if (process.env.NODE_ENV === 'test') {
+  plugins.push('@babel/plugin-transform-modules-commonjs')
 }
+
+module.exports = { presets, plugins }
 "
 `;
 
 exports[`test ok 4`] = `
-"package-lock=false
+"{
+  \\"compilerOptions\\": {
+    \\"target\\": \\"esnext\\",
+    \\"module\\": \\"commonjs\\",
+    \\"baseUrl\\": \\"./src\\",
+    \\"declarationDir\\": \\"./lib\\",
+    \\"declaration\\": true,
+    \\"allowSyntheticDefaultImports\\": true,
+    \\"esModuleInterop\\": true,
+    \\"jsx\\": \\"react\\",
+    \\"moduleResolution\\": \\"node\\",
+    \\"noUnusedLocals\\": true,
+    \\"noUnusedParameters\\": true,
+    \\"pretty\\": true,
+    \\"skipLibCheck\\": true,
+    \\"sourceMap\\": true,
+    \\"lib\\": [
+      \\"esnext\\",
+      \\"es2015\\",
+      \\"dom\\"
+    ]
+  },
+  \\"exclude\\": [
+    \\"tests\\",
+    \\"examples\\",
+    \\"node_modules\\",
+    \\"**/node_modules/*\\"
+  ]
+}
 "
 `;
