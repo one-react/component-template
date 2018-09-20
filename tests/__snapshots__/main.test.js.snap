@@ -21,6 +21,7 @@ Array [
   "examples/package.json",
   "examples/public/favicon.ico",
   "examples/stories/index.story.tsx",
+  "greenkeeper.json",
   "jest.config.js",
   "package.json",
   "readme.md",

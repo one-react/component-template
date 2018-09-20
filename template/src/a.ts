@@ -1,9 +1,9 @@
 export default 'world!'
 
 export class C {
-  public x = 10
-  public getX = () => this.x
-  public setX = (newVal: number) => {
+  x = 10
+  getX = () => this.x
+  setX = (newVal: number) => {
     this.x = newVal
   }
 }

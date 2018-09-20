@@ -14,7 +14,7 @@
     "build:es": "npm run build:es:types && NODE_ENV=es babel src --out-dir es --copy-files --extensions '.ts,.tsx'",
     "build:es:types": "tsc --emitDeclarationOnly --declarationDir es",
     "watch": "babel src --watch --out-dir lib",
-    "lint": "tslint src",
+    "lint": "tslint src/**/*.ts{,x} examples/stories/**/*.ts{,x}",
     "semantic-release": "semantic-release",
     "coverage": "codecov"
   },
