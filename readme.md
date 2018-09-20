@@ -9,7 +9,7 @@
 [![Chat](https://img.shields.io/gitter/room/one-react-org/Lobby.svg)](https://gitter.im/one-react-org/Lobby)
 [![Code Climate](https://img.shields.io/codeclimate/github/one-react/component-template.svg)](https://codeclimate.com/github/one-react/component-template)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Greenkeeper badge](https://badges.greenkeeper.io/one-react/component-template.svg)](https://greenkeeper.io/)
 
 ## Usage
 
