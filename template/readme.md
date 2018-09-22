@@ -1,4 +1,4 @@
-# One More React Component: <%= name %>
+# One React Component: <%= name %>
 > <%= description %>
 
 [![TravisCI Build](https://img.shields.io/travis/one-react/<%= name %>.svg)](https://travis-ci.org/one-react/<%= name %>)
