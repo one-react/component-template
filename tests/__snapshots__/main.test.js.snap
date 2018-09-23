@@ -38,7 +38,7 @@ Array [
 `;
 
 exports[`test ok 2`] = `
-"# One More React Component: stub
+"# One React Component: stub
 > one react component: stub
 
 [![TravisCI Build](https://img.shields.io/travis/one-react/stub.svg)](https://travis-ci.org/one-react/stub)
