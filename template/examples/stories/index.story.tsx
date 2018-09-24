@@ -1,36 +1,28 @@
-import React, { CSSProperties} from 'react'
+import { action } from '@storybook/addon-actions'
+import { withInfo } from '@storybook/addon-info'
 import { storiesOf } from '@storybook/react'
-import { withInfo } from "@storybook/addon-info"
-// import { action } from '@storybook/addon-actions'
+import React from 'react'
 
-import Hello from '../../src'
+import Button from '../../src'
 
-storiesOf('Hello', module)
-  .add('with text', () => (
-    <Hello content="world" />
-  ))
-  .add('docs', withInfo({ inline: true })(() => (
-    <div style={styles.container}>
-      <div style={styles.firstCellContainer}>
-        <Hello content="world!" />
-      </div>
-      <div style={styles.cellContainer}>
-      <Hello content="world" />
+import './styles.scss'
+
+const handleClick = action('sample-click')
+storiesOf('or-sample', module).add(
+  'sample',
+  withInfo({ inline: true })(() => (
+    <div>
+      <h1>button type:</h1>
+      <div>
+        <Button type="primary" onClick={handleClick}>
+          ADD TO CART
+        </Button>
+        <Button onClick={handleClick}>SIGN UP</Button>
+        <Button type="warning" onClick={handleClick}>
+          DELETE
+        </Button>
+        <Button onClick={handleClick}>TOO LOOOOOOOOOOOOOOOOOOG</Button>
       </div>
     </div>
-  )))
-  // .add('with some emoji', () => (
-  //   <button onClick={action('clicked')}>😀 😎 👍 💯</button>
-  // ))
-
-const styles: { [key: string]: CSSProperties } = {
-  container: {
-    display: "flex",
-  },
-  cellContainer: {
-    width: 100,
-    height: 100,
-    backgroundColor: "rgb(72, 78, 104)",
-  },
-};
-styles.firstCellContainer = { ...styles.cellContainer, marginRight: 20 };
+  ))
+)

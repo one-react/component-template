@@ -6,6 +6,10 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': 'babel-jest',
   },
+  moduleNameMapper: {
+    '\\.(jpg|jpeg|png|gif|webp|svg)$': '<rootDir>/tests/__mocks__/fileMock.js',
+    '\\.(css|scss)$': '<rootDir>/tests/__mocks__/styleMock.js'
+  },
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**',

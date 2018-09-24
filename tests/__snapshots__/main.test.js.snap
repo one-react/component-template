@@ -19,17 +19,19 @@ Array [
   "examples/.storybook/manager-head.html",
   "examples/.storybook/webpack.config.js",
   "examples/package.json",
-  "examples/public/favicon.ico",
+  "examples/public/.gitkeep",
   "examples/stories/index.story.tsx",
+  "examples/stories/styles.scss",
+  "greenkeeper.json",
   "jest.config.js",
   "package.json",
   "readme.md",
-  "src/Hello.tsx",
-  "src/a.ts",
+  "src/Sample.tsx",
   "src/index.ts",
   "src/styles.scss",
-  "tests/Hello.test.tsx",
-  "tests/a.test.ts",
+  "tests/Sample.test.tsx",
+  "tests/__mocks__/fileMock.js",
+  "tests/__mocks__/styleMock.js",
   "tests/setup.ts",
   "tsconfig.json",
   "tslint.json",
@@ -37,8 +39,10 @@ Array [
 `;
 
 exports[`test ok 2`] = `
-"# One More React Component: stub
-> one react component: stub
+"# One React Component: stub
+
+
+<p align=\\"center\\"><img width=\\"150\\" src=\\"https://cdn.rawgit.com/one-react/assets/2a4f10b4/logo%402x.png\\" alt=\\"logo\\"></p>
 
 [![TravisCI Build](https://img.shields.io/travis/one-react/stub.svg)](https://travis-ci.org/one-react/stub)
 [![CircieCI Build](https://img.shields.io/circleci/project/github/one-react/stub.svg)](https://circleci.com/gh/one-react/stub)
@@ -48,6 +52,20 @@ exports[`test ok 2`] = `
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Greenkeeper badge](https://badges.greenkeeper.io/one-react/stub.svg)](https://greenkeeper.io/) 
+
+## Installation
+\`\`\`
+// with npm
+npm install or-stub
+
+// with yarn
+yarn add or-stub
+\`\`\`
+
+## Docs
+> powered by [storybook](https://storybook.js.org/)
+
+[Click Here](https://one-react.github.io/stub)
 
 ## License
 

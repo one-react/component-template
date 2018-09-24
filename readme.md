@@ -25,14 +25,14 @@ npm i -g sao
 
 ```bash
 cd my-component
-sao or-template
+sao or-template --update
 ```
 
 ### From git
 
 ```bash
 cd my-component
-sao one-react/component-template
+sao one-react/component-template --update // force using latest
 ```
 
 ## License

@@ -5,8 +5,7 @@ module.exports = {
       default: ':folderName:'
     },
     description: {
-      message: 'How would you descripe the new project?',
-      default: ({name}) => `one react component: ${name}`
+      message: 'How would you descripe the new project?'
     },
     username: {
       message: 'What is your GitHub username?',
@@ -17,17 +16,13 @@ module.exports = {
       message: 'What is your GitHub email?',
       default: ':gitEmail:',
       store: true
-    },
-    gitInit: {
-      message: 'Should git init then?',
-      default: true,
-    },
+    }
   },
   move: {
     'gitignore': '.gitignore'
   },
   showTip: true,
-  gitInit: ({ gitInit }) => gitInit,
+  gitInit: true,
   installDependencies: false,
   npmInstall: true,
 }
