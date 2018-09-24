@@ -4,7 +4,6 @@
 
 [![Build Status](https://img.shields.io/travis/one-react/component-template.svg)](https://travis-ci.org/one-react/component-template)
 [![Build Status](https://img.shields.io/circleci/project/github/one-react/component-template.svg)](https://circleci.com/gh/one-react/component-template)
-[![Coverage](https://img.shields.io/codecov/c/github/one-react/component-template.svg)](https://codecov.io/gh/one-react/component-template) 
 [![Version](https://img.shields.io/npm/v/or-template.svg)](https://www.npmjs.com/package/or-template)
 [![Chat](https://img.shields.io/gitter/room/one-react-org/Lobby.svg)](https://gitter.im/one-react-org/Lobby)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
