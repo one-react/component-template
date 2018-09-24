@@ -19,7 +19,7 @@ Array [
   "examples/.storybook/manager-head.html",
   "examples/.storybook/webpack.config.js",
   "examples/package.json",
-  "examples/public/favicon.ico",
+  "examples/public/.gitkeep",
   "examples/stories/index.story.tsx",
   "greenkeeper.json",
   "jest.config.js",
@@ -39,7 +39,9 @@ Array [
 
 exports[`test ok 2`] = `
 "# One React Component: stub
-> one react component: stub
+
+
+<p align=\\"center\\"><img width=\\"150\\" src=\\"https://cdn.rawgit.com/one-react/assets/2a4f10b4/logo%402x.png\\" alt=\\"logo\\"></p>
 
 [![TravisCI Build](https://img.shields.io/travis/one-react/stub.svg)](https://travis-ci.org/one-react/stub)
 [![CircieCI Build](https://img.shields.io/circleci/project/github/one-react/stub.svg)](https://circleci.com/gh/one-react/stub)
@@ -49,6 +51,20 @@ exports[`test ok 2`] = `
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Greenkeeper badge](https://badges.greenkeeper.io/one-react/stub.svg)](https://greenkeeper.io/) 
+
+## Installation
+\`\`\`
+// with npm
+npm install or-stub
+
+// with yarn
+yarn add or-stub
+\`\`\`
+
+## Docs
+> powered by [storybook](https://storybook.js.org/)
+
+[Click Here](https://one-react.github.io/stub)
 
 ## License
 
