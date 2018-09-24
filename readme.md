@@ -2,6 +2,8 @@
 
 > a SAOJS template
 
+<p align="center"><img width="150" src="https://cdn.rawgit.com/one-react/assets/2a4f10b4/logo%402x.png" alt="logo"></p>
+
 [![Build Status](https://img.shields.io/travis/one-react/component-template.svg)](https://travis-ci.org/one-react/component-template)
 [![Build Status](https://img.shields.io/circleci/project/github/one-react/component-template.svg)](https://circleci.com/gh/one-react/component-template)
 [![Version](https://img.shields.io/npm/v/or-template.svg)](https://www.npmjs.com/package/or-template)
