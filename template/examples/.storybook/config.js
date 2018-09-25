@@ -3,7 +3,7 @@ import { setOptions } from '@storybook/addon-options'
 
 setOptions({
   name: 'One React',
-  url: '#',
+  url: 'https://github.com/one-react/<%= name %>',
   goFullScreen: false,
   showAddonPanel: true,
   addonPanelInRight: true,
