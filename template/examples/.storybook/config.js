@@ -1,7 +1,7 @@
 import { configure } from '@storybook/react'
-import { setOptions } from '@storybook/addon-options'
+import { withOptions } from '@storybook/addon-options'
 
-setOptions({
+withOptions({
   name: 'One React',
   url: 'https://github.com/one-react/<%= name %>',
   goFullScreen: false,
