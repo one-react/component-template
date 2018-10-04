@@ -20,8 +20,12 @@ Array [
   "examples/.storybook/webpack.config.js",
   "examples/package.json",
   "examples/public/.gitkeep",
+  "examples/stories/example.tsx",
   "examples/stories/index.story.tsx",
   "examples/stories/styles.scss",
+  "examples/stories/util.tsx",
+  "examples/tsconfig.json",
+  "examples/types/declarations.d.ts",
   "greenkeeper.json",
   "jest.config.js",
   "package.json",
@@ -124,8 +128,7 @@ exports[`test ok 4`] = `
   \\"exclude\\": [
     \\"tests\\",
     \\"examples\\",
-    \\"node_modules\\",
-    \\"**/node_modules/*\\"
+    \\"node_modules\\"
   ]
 }
 "

@@ -3,26 +3,33 @@ import { withInfo } from '@storybook/addon-info'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
-import Button from '../../src'
+import Sample from 'or-<%= name %>'
+import { previewCode } from './util'
+
+import Example from './example'
 
 import './styles.scss'
 
-const handleClick = action('sample-click')
-storiesOf('or-sample', module).add(
-  'sample',
-  withInfo({ inline: true })(() => (
-    <div>
-      <h1>button type:</h1>
-      <div>
-        <Button type="primary" onClick={handleClick}>
-          ADD TO CART
-        </Button>
-        <Button onClick={handleClick}>SIGN UP</Button>
-        <Button type="warning" onClick={handleClick}>
-          DELETE
-        </Button>
-        <Button onClick={handleClick}>TOO LOOOOOOOOOOOOOOOOOOG</Button>
-      </div>
-    </div>
-  ))
-)
+const handleClick = action('basic-click')
+storiesOf('or-sample', module)
+  .addDecorator(
+    withInfo({
+      inline: true,
+      propTables: [Sample],
+      propTablesExclude: [Example],
+      styles: {
+        jsxInfoContent: {
+          borderTop: 'none',
+          margin: 0
+        }
+      }
+    })
+  )
+  .add('basic', () => <Sample onClick={handleClick}>Test</Sample>)
+  .add('sample', () => <Example />, {
+    info: {
+      source: false,
+      text: previewCode(require('!!raw-loader!./example.tsx'))
+    }
+  })
+  

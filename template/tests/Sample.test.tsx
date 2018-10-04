@@ -3,15 +3,15 @@ import React from 'react'
 
 import Sample from '../src'
 
-describe('src/index', () => {
-  function renderBtnFactory (type?: 'warning' | 'primary') {
-    const wrapper = mount(<Sample type={type}>test</Sample>)
-    expect(wrapper.find('.or-btn').length).toBe(1)
-    if (type) {
-      expect(wrapper.find(`.or-btn-${type}`).length).toBe(1)
-    }
+function renderBtnFactory(type?: 'warning' | 'primary') {
+  const wrapper = mount(<Sample type={type}>test</Sample>)
+  expect(wrapper.find('.or-btn').length).toBe(1)
+  if (type) {
+    expect(wrapper.find(`.or-btn-${type}`).length).toBe(1)
   }
+}
 
+describe('src/index', () => {
   it('should render properly: no type', () => {
     renderBtnFactory()
   })
