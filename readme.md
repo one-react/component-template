@@ -52,6 +52,7 @@ After answering necessary questions, the component initial process begins:
 * Copy files from this template
 * Install node modules by npm
 * Initialize git repo
+
 Then the project structrue should be like this:
 
 <p align="center">
