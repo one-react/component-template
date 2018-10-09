@@ -55,9 +55,7 @@ After answering necessary questions, the component initial process begins:
 
 Then the project structrue should be like this:
 
-<p align="center">
-  <img width="600" src="https://cdn.rawgit.com/one-react/component-template/dev/assets/dir-tree-view.png" alt="dir tree view">
-</p>
+<p align="center"><img width="600" src="https://cdn.rawgit.com/one-react/component-template/dev/assets/dir-tree-view.png" alt="dir tree view"></p>
 
 ## Development
 > Must install dependencies under both root dir and `examples` dir firstly
