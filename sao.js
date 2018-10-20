@@ -1,3 +1,5 @@
+const { spawnSync } = require('child_process')
+
 module.exports = {
   prompts: {
     name: {
@@ -5,7 +7,7 @@ module.exports = {
       default: ':folderName:'
     },
     description: {
-      message: 'How would you descripe the new project?'
+      message: 'How would you describe the new project?'
     },
     username: {
       message: 'What is your GitHub username?',
@@ -24,5 +26,16 @@ module.exports = {
   showTip: true,
   gitInit: true,
   installDependencies: false,
-  npmInstall: true,
+  npmInstall: false,
+  post () {
+    [
+      ['git', ['checkout', '-b', 'dev']],
+      ['git', ['add', '.']],
+      ['git', ['commit', '-m', 'feat: initial commit']]
+    ].forEach(([command, args]) => {
+      spawnSync(command, args, {
+        stdio: 'inherit'
+      })
+    })
+  }
 }
