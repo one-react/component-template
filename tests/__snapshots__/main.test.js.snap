@@ -125,10 +125,8 @@ exports[`test ok 4`] = `
       \\"dom\\"
     ]
   },
-  \\"exclude\\": [
-    \\"tests\\",
-    \\"examples\\",
-    \\"node_modules\\"
+  \\"include\\": [
+    \\"src\\"
   ]
 }
 "
