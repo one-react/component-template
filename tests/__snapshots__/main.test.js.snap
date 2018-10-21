@@ -45,7 +45,6 @@ Array [
 exports[`test ok 2`] = `
 "# One React Component: stub
 
-
 <p align=\\"center\\"><img width=\\"150\\" src=\\"https://cdn.rawgit.com/one-react/assets/master/logo%402x.png\\" alt=\\"logo\\"></p>
 
 [![TravisCI Build](https://img.shields.io/travis/one-react/stub.svg)](https://travis-ci.org/one-react/stub)
@@ -90,6 +89,7 @@ exports[`test ok 3`] = `
 ]
 
 const plugins = [
+  '@babel/plugin-transform-runtime',
   '@babel/plugin-proposal-class-properties',
   '@babel/plugin-proposal-object-rest-spread'
 ]
