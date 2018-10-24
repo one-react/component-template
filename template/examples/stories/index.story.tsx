@@ -11,7 +11,7 @@ import Example from './example'
 import './styles.scss'
 
 const handleClick = action('basic-click')
-storiesOf('or-sample', module)
+storiesOf('or-<%= name %>', module)
   .addDecorator(
     withInfo({
       inline: true,
