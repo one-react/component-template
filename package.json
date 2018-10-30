@@ -17,10 +17,6 @@
     "url": "https://github.com/one-react/component-template/issues"
   },
   "homepage": "https://github.com/one-react/component-template#readme",
-  "files": [
-    "sao.js",
-    "template"
-  ],
   "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^7.1.2",
