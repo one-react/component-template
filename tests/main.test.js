@@ -20,8 +20,8 @@ describe('test', () => {
     expect(pkg.author).toBe('placeholder <placholder@mymail.com>')
     expect(pkg.license).toBe('MIT')
 
-    expect(stream.fileContents('readme.md')).toMatchSnapshot()
-    expect(stream.fileContents('.babelrc.js')).toMatchSnapshot()
-    expect(stream.fileContents('tsconfig.json')).toMatchSnapshot()
+    expect(stream.fileContents('readme.md')).toMatchSnapshot('readme.md content')
+    expect(stream.fileContents('.babelrc.js')).toMatchSnapshot('.babelrc.js')
+    expect(stream.fileContents('tsconfig.json')).toMatchSnapshot('tsconfig.json')
   })
 })
