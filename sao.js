@@ -29,12 +29,13 @@ module.exports = {
     'gitignore': '.gitignore'
   },
   showTip: true,
-  gitInit: (answers) => answers.gitInit,
+  gitInit: false,
   installDependencies: false,
   npmInstall: false,
   post (ctx) {
     if (ctx.answers.gitInit) {
       [
+        ['git', ['init']],
         ['git', ['checkout', '-b', 'dev']],
         ['git', ['add', '.']],
         ['git', ['commit', '-m', 'feat: initial commit']]
