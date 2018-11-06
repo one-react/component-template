@@ -33,7 +33,7 @@
     "jest": "^23.4.1",
     "lint-staged": "^8.0.0",
     "prettier": "^1.14.3",
-    "sao": "^0.22.1",
+    "sao": "^1.0.0",
     "semantic-release": "^15.9.15"
   },
   "husky": {
