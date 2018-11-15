@@ -5,7 +5,7 @@ interface Props {
   /**
    * additional classname for btn
    */
-  classname?: string
+  className?: string
   /**
    * type for button
    **/
@@ -18,13 +18,13 @@ interface Props {
 
 export class Sample extends PureComponent<Props, {}> {
   render() {
-    const { classname, type, children } = this.props
+    const { className, type, children } = this.props
     const btnClass = clx(
       {
         'or-btn': true,
         [`or-btn-${type}`]: type
       },
-      classname
+      className
     )
 
     return (
