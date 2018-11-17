@@ -45,7 +45,11 @@ yarn add or-<%= name %>
 ## Basic Example
 
 ## API
-[see](https://one-react.github.io/<%= name %>)
+```ts
+interface Props {
+  
+}
+```
 
 ## Customize Theme
 **Customize in webpack**
@@ -54,12 +58,9 @@ The following variables can be overridden:
 
 ```scss
 $or-btn-primary-color: $or-primary-color !default;
-$or-btn-warning-color: $or-warning-color !default;
-$or-btn-disabled-color: $or-disabled-color !default;
-$or-btn-default-color: $or-gray8 !default;
 ...
 ```
-For more variables, see [here](https://github.com/one-react/button/blob/master/src/styles.scss).
+For more variables, see [here](https://github.com/one-react/<%= name %>/blob/master/src/styles.scss).
 
 First you should create a `theme.scss` file to declare the variables you want to override.
 
