@@ -54,13 +54,15 @@ interface Props {
 ## Customize Theme
 **Customize in webpack**
 
-The following variables can be overridden:
+The following variables in or-<%= name %> can be overridden:
 
 ```scss
 $or-btn-primary-color: $or-primary-color !default;
 ...
 ```
 For more variables, see [here](https://github.com/one-react/<%= name %>/blob/master/src/styles.scss).
+
+Alternatively, you can override variables from [or-theme](https://github.com/one-react/theme/blob/master/src/variables.scss) to keep all or-components in a unified theme style.
 
 First you should create a `theme.scss` file to declare the variables you want to override.
 
