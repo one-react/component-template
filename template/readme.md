@@ -27,6 +27,21 @@ yarn add or-<%= name %>
 ## Usage
 - Config webpack `sass-loader` if you are using webpack.
 
+```js
+// webpack.config.js
+{
+  test: /\.scss$/,
+  use: [
+    'style-loader',
+    'css-loader',
+    'sass-loader'
+  ],
+  include: [
+    /node_modules\/or\-\w+/ //include or-components
+  ]
+}
+```
+
 ## Basic Example
 
 ## API
@@ -34,7 +49,22 @@ yarn add or-<%= name %>
 
 ## Customize Theme
 **Customize in webpack**
-We will use `data` provided by `scss-loader` to override the default values of the variables.
+
+The following variables can be overridden:
+
+```scss
+$or-btn-primary-color: $or-primary-color !default;
+$or-btn-warning-color: $or-warning-color !default;
+$or-btn-disabled-color: $or-disabled-color !default;
+$or-btn-default-color: $or-gray8 !default;
+...
+```
+For more variables, see [here](https://github.com/one-react/button/blob/master/src/styles.scss).
+
+First you should create a `theme.scss` file to declare the variables you want to override.
+
+Then use the [data](https://github.com/webpack-contrib/sass-loader#environment-variables)  option provided by `sass-loader` to override the default values of the variables.
+
 We take a typical `webpack.config.js` file as example to customize it's sass-loader options.
 
 ```js
@@ -47,25 +77,14 @@ We take a typical `webpack.config.js` file as example to customize it's sass-loa
     {
       loader: 'sass-loader',
       options: {
-        data: fs.readFileSync(path.resolve(__dirname, 'yourCustomTheme.scss'))
+        data: fs.readFileSync(path.resolve(__dirname, 'theme.scss')) // pass theme.scss to sass-loader
       }
     }
+  ],
+  include: [
+    /node_modules\/or\-\w+/ //include or-components
   ]
 }
-```
-
-```css
-/**
- * default variables
- **/
-$primary-color: #000;
-```
-
-```css
-/**
- * yourCustomTheme.scss
- **/
-$primary-color: red;
 ```
 
 ## Demos and Docs
