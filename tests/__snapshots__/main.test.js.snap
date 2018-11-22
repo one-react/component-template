@@ -41,3 +41,161 @@ Array [
   "tslint.json",
 ]
 `;
+
+exports[`test ok: .babelrc.js 1`] = `
+"const presets = [
+  [
+    '@babel/preset-env',
+    {
+      modules: process.env.NODE_ENV === 'es' ? false : 'commonjs'
+    }
+  ],
+  '@babel/preset-react',
+  '@babel/preset-typescript'
+]
+
+const plugins = [
+  '@babel/plugin-transform-runtime',
+  '@babel/plugin-proposal-class-properties',
+  '@babel/plugin-proposal-object-rest-spread'
+]
+
+if (process.env.NODE_ENV === 'test') {
+  plugins.push('@babel/plugin-transform-modules-commonjs')
+}
+
+module.exports = { presets, plugins }
+"
+`;
+
+exports[`test ok: readme.md content 1`] = `
+"# One React Component: stub
+
+
+<p align=\\"center\\"><img width=\\"150\\" src=\\"https://cdn.rawgit.com/one-react/assets/master/logo%402x.png\\" alt=\\"logo\\"></p>
+
+[![TravisCI Build](https://img.shields.io/travis/one-react/stub.svg)](https://travis-ci.org/one-react/stub)
+[![CircieCI Build](https://img.shields.io/circleci/project/github/one-react/stub.svg)](https://circleci.com/gh/one-react/stub)
+[![Coverage](https://img.shields.io/codecov/c/github/one-react/stub.svg)](https://codecov.io/gh/one-react/stub) 
+[![Version](https://img.shields.io/npm/v/or-stub.svg)](https://www.npmjs.com/package/or-stub)
+[![Chat](https://img.shields.io/gitter/room/one-react-org/Lobby.svg)](https://gitter.im/one-react-org/Lobby)
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Greenkeeper badge](https://badges.greenkeeper.io/one-react/stub.svg)](https://greenkeeper.io/) 
+
+## Installation
+\`\`\`
+// with npm
+npm install or-stub
+
+// with yarn
+yarn add or-stub
+
+\`\`\`
+
+## Usage
+- Config webpack \`sass-loader\` if you are using webpack.
+
+\`\`\`js
+// webpack.config.js
+{
+  test: /\\\\.scss$/,
+  use: [
+    'style-loader',
+    'css-loader',
+    'sass-loader'
+  ],
+  include: [
+    /node_modules\\\\/or\\\\-\\\\w+/ //include or-components
+  ]
+}
+\`\`\`
+
+## Basic Example
+
+## API
+\`\`\`ts
+interface Props {
+  
+}
+\`\`\`
+
+## Customize Theme
+**Customize in webpack**
+
+The following variables in or-stub can be overridden:
+
+\`\`\`scss
+$or-btn-primary-color: $or-primary-color !default;
+...
+\`\`\`
+For more variables, see [here](https://github.com/one-react/stub/blob/master/src/styles.scss).
+
+Alternatively, you can override variables from [or-theme](https://github.com/one-react/theme/blob/master/src/variables.scss) to keep all or-components in a unified theme style.
+
+First you should create a \`theme.scss\` file to declare the variables you want to override.
+
+Then use the [data](https://github.com/webpack-contrib/sass-loader#environment-variables)  option provided by \`sass-loader\` to override the default values of the variables.
+
+We take a typical \`webpack.config.js\` file as example to customize it's sass-loader options.
+
+\`\`\`js
+// webpack.config.js
+{
+  test: /\\\\.scss$/,
+  use: [
+    'style-loader',
+    'css-loader',
+    {
+      loader: 'sass-loader',
+      options: {
+        data: fs.readFileSync(path.resolve(__dirname, 'theme.scss')) // pass theme.scss to sass-loader
+      }
+    }
+  ],
+  include: [
+    /node_modules\\\\/or\\\\-\\\\w+/ //include or-components
+  ]
+}
+\`\`\`
+
+## Demos and Docs
+> powered by [storybook](https://storybook.js.org/)
+
+[Click Here](https://one-react.github.io/stub)
+
+## License
+
+MIT &copy; placeholder
+"
+`;
+
+exports[`test ok: tsconfig.json 1`] = `
+"{
+  \\"compilerOptions\\": {
+    \\"target\\": \\"esnext\\",
+    \\"module\\": \\"commonjs\\",
+    \\"baseUrl\\": \\"./src\\",
+    \\"declarationDir\\": \\"./lib\\",
+    \\"declaration\\": true,
+    \\"allowSyntheticDefaultImports\\": true,
+    \\"esModuleInterop\\": true,
+    \\"jsx\\": \\"react\\",
+    \\"moduleResolution\\": \\"node\\",
+    \\"noUnusedLocals\\": true,
+    \\"noUnusedParameters\\": true,
+    \\"pretty\\": true,
+    \\"skipLibCheck\\": true,
+    \\"sourceMap\\": true,
+    \\"lib\\": [
+      \\"esnext\\",
+      \\"es2015\\",
+      \\"dom\\"
+    ]
+  },
+  \\"include\\": [
+    \\"src\\"
+  ]
+}
+"
+`;
