@@ -75,4 +75,4 @@ Bundles from examples will be deployed in CI process(only master branch)
 
 ## License
 
-MIT &copy; [One React](github.com/one-react)
+MIT &copy; <%= username %>

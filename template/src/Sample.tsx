@@ -5,11 +5,20 @@ interface Props {
   /**
    * additional classname for btn
    */
-  classname?: string
+  className?: string
   /**
    * type for button
    **/
   type?: 'primary' | 'warning'
+  /**
+   * size for button
+   * @default 'default'
+   **/
+  size?: 'large' | 'small'
+  /**
+   * whether the button can be clicked
+   **/
+  disabled?: boolean
   /**
    * callback triggered button click
    **/
@@ -18,13 +27,21 @@ interface Props {
 
 export class Sample extends PureComponent<Props, {}> {
   render() {
-    const { classname, type, children } = this.props
+    const {
+      type = 'default',
+      size = 'default',
+      children,
+      disabled,
+      className
+    } = this.props
     const btnClass = clx(
+      'or-btn',
       {
-        'or-btn': true,
-        [`or-btn-${type}`]: type
+        [`or-btn-${type}`]: type,
+        [`or-btn-size-${size}`]: size,
+        [`or-btn-disabled`]: disabled
       },
-      classname
+      className
     )
 
     return (
@@ -36,8 +53,8 @@ export class Sample extends PureComponent<Props, {}> {
 
   handleClick = (e: MouseEvent<HTMLElement>) => {
     e.preventDefault()
-    const { onClick } = this.props
-    if (onClick) {
+    const { disabled, onClick } = this.props
+    if (!disabled && onClick) {
       onClick()
     }
   }

@@ -2,6 +2,7 @@
 <% if (description) { %>
 > <%= description %>
 <% } %>
+
 <p align="center"><img width="150" src="https://cdn.rawgit.com/one-react/assets/master/logo%402x.png" alt="logo"></p>
 
 [![TravisCI Build](https://img.shields.io/travis/one-react/<%= name %>.svg)](https://travis-ci.org/one-react/<%= name %>)
@@ -20,9 +21,76 @@ npm install or-<%= name %>
 
 // with yarn
 yarn add or-<%= name %>
+
 ```
 
-## Docs
+## Usage
+- Config webpack `sass-loader` if you are using webpack.
+
+```js
+// webpack.config.js
+{
+  test: /\.scss$/,
+  use: [
+    'style-loader',
+    'css-loader',
+    'sass-loader'
+  ],
+  include: [
+    /node_modules\/or\-\w+/ //include or-components
+  ]
+}
+```
+
+## Basic Example
+
+## API
+```ts
+interface Props {
+  
+}
+```
+
+## Customize Theme
+**Customize in webpack**
+
+The following variables in or-<%= name %> can be overridden:
+
+```scss
+$or-btn-primary-color: $or-primary-color !default;
+...
+```
+For more variables, see [here](https://github.com/one-react/<%= name %>/blob/master/src/styles.scss).
+
+Alternatively, you can override variables from [or-theme](https://github.com/one-react/theme/blob/master/src/variables.scss) to keep all or-components in a unified theme style.
+
+First you should create a `theme.scss` file to declare the variables you want to override.
+
+Then use the [data](https://github.com/webpack-contrib/sass-loader#environment-variables)  option provided by `sass-loader` to override the default values of the variables.
+
+We take a typical `webpack.config.js` file as example to customize it's sass-loader options.
+
+```js
+// webpack.config.js
+{
+  test: /\.scss$/,
+  use: [
+    'style-loader',
+    'css-loader',
+    {
+      loader: 'sass-loader',
+      options: {
+        data: fs.readFileSync(path.resolve(__dirname, 'theme.scss')) // pass theme.scss to sass-loader
+      }
+    }
+  ],
+  include: [
+    /node_modules\/or\-\w+/ //include or-components
+  ]
+}
+```
+
+## Demos and Docs
 > powered by [storybook](https://storybook.js.org/)
 
 [Click Here](https://one-react.github.io/<%= name %>)
