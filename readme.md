@@ -2,7 +2,7 @@
 
 > a SAOJS template for one react components
 
-<p align="center"><img width="150" src="https://cdn.rawgit.com/one-react/assets/master/logo%402x.png" alt="logo"></p>
+<p align="center"><img width="150" src="https://cdn.jsdelivr.net/gh/one-react/assets/logo%402x.png" alt="logo"></p>
 
 [![Build Status](https://img.shields.io/travis/one-react/component-template.svg)](https://travis-ci.org/one-react/component-template)
 [![Build Status](https://img.shields.io/circleci/project/github/one-react/component-template.svg)](https://circleci.com/gh/one-react/component-template)
@@ -55,7 +55,7 @@ After answering necessary questions, the component initial process begins:
 
 Then the project structrue should be like this:
 
-<p><img width="600" src="https://cdn.rawgit.com/one-react/component-template/dev/assets/dir-tree-view.png" alt="dir tree view"></p>
+<p><img width="600" src="https://cdn.jsdelivr.net/gh/one-react/component-template@dev/assets/dir-tree-view.png" alt="dir tree view"></p>
 
 ## Development
 > Must install dependencies under both root dir and `examples` dir firstly
