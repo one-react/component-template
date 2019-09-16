@@ -20,7 +20,7 @@
   "homepage": "https://github.com/one-react/component-template#readme",
   "dependencies": {},
   "devDependencies": {
-    "@commitlint/cli": "^7.1.2",
+    "@commitlint/cli": "^8.2.0",
     "@commitlint/config-angular": "^7.1.2",
     "babel-eslint": "^10.0.0",
     "codecov": "^3.1.0",
